@@ -1,0 +1,193 @@
+@bg-color: #ffffff;
+@nav-line-color: #fdda00;
+@nav-text-color: #000000; 
+@body-text-color: #000000;
+@border-color: #eaeaea; 
+@hover-color: #fdda00;
+@btn-color: #fdda00;
+@bg-footer-upper: #000000;
+@bg-footer-low:  #222222;
+@footer-text-color: #ffffff;
+
+
+
+html, body{
+width:100%;
+overflow-x:hidden;
+background: @bg-color;
+}
+
+
+
+.paddings {
+	padding-right: 0;
+	padding-left: 0; 
+
+}
+
+
+.navbar-custom {
+	border-bottom: 20px solid @nav-line-color;
+	
+
+	.nav__list-item {
+		color: @nav-text-color;
+		padding: 20px;
+		font-weight: bold;
+	}
+	.navbar-header__brand {
+		padding: 0;
+		img{
+
+			height: 55px;
+		}
+		
+	}
+}
+
+
+
+header {
+	.header__text {
+		margin-top: 50px;
+	}
+	.text__main {
+		font-size: 40px;
+	}
+}
+.select-color {
+	margin-top: 40px;
+	input[name=colors] {
+        visibility:hidden;
+
+	}
+	label {
+	    cursor: pointer;
+	    border: 3px solid white;
+	}
+	label:hover {
+		border: 3px solid @hover-color;
+	}
+	input[name=colors]:checked + label {
+	    border: 3px solid @hover-color;
+	}
+
+}
+.gender {
+	margin-top: 90px;
+	input[name=genders] {
+        visibility:hidden;
+	}
+	.gender__items {
+	    cursor: pointer;
+	    border: 3px solid @border-color;
+	    width: 300px;
+   		padding: 45px 60px;
+	}
+	.gender__items:hover {
+		border: 3px solid @hover-color;
+	}
+	input[name=genders]:checked + label {
+	    border: 3px solid @hover-color;
+	}
+}
+
+.size {
+	margin-top: 40px;
+	padding: 20px;
+	input[name=sizes] {
+        visibility:hidden;
+	}
+	h3{
+		margin-bottom: 20px;
+	}
+	label {
+	    cursor: pointer;
+	    border: solid 3px #eaeaea;
+  		height: 85px;
+  		width: 85px;
+  		border-radius:50%;
+  		padding: 28px;  		
+	}
+	label:hover {
+		border: 3px solid @hover-color;
+	}
+	input[name=sizes]:checked + label {
+	    border: 3px solid @hover-color;
+	}
+}
+.add-to-cart {
+	    margin: 75px 0;
+	.add-to-card__button {
+		background: @btn-color;
+		color: @body-text-color;
+		padding:  15px 50px;
+		border-radius: 2px;
+	}
+	.add-to-card__button:hover {
+		text-decoration: none;
+		padding: 14px 49px;
+	}
+	.add-to-card__button:focus {
+		text-decoration: none;
+	}
+}
+
+
+.footer-upper {
+	padding: 55px;
+	background: @bg-footer-upper;
+	
+	p {
+		color: @footer-text-color;
+	}
+	.footer-upper__logo-name {
+		font-size: 45px;
+    	letter-spacing: 20px;
+    	font-weight: 700;
+    	position: relative;
+	}
+	
+	.footer-upper__form {
+		    margin-top: 40px;
+	}
+	button {
+		height: 35px;
+		background: @btn-color;
+		color: @body-text-color;
+		border-radius: 4px;
+
+	}
+	.footer-upper__list {
+	  list-style-type: none;
+	  margin-top: 40px;
+	  padding-left: 0;
+	  font-weight: bold;
+	  a {
+		color: @footer-text-color;
+	  }
+	}
+	
+}
+.footer-low {
+	height: 80px;
+	background: @bg-footer-low;
+	.footer-low__list{
+		margin-bottom: 0;
+		padding-top: 25px;
+		.list__image{
+			padding: 2px;
+		}
+		.list__image:hover {
+			padding: 1px;
+		}
+
+	}
+}
+@media (max-width: 768px) {
+
+	.select-color__item {
+		height: 100px;
+	}
+	
+}
